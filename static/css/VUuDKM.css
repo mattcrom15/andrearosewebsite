@@ -196,11 +196,85 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     padding:15px
 }
 
+.mainmodaldiv{
+    position: fixed;
+    top:0;
+    left:0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: none;
+    background-color: rgb(0,0,0);
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;   
+    transition: 0.3s ease-in-out;
+}
+
+.mainmodaldialog{
+    position: absolute;
+    background: white;
+    width: 40%;
+    height: auto;
+    margin: 15% 35%;
+}
+
+.modal-content{
+    padding: 2rem;
+}
+
+.modalclosebtn{
+    position: absolute;
+    top:0;
+    right:0;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: rotateZ(45deg);
+    font-size: 36px;
+    outline: none;
+}
+
+.modalclosebtn:hover{
+    color: rgb(150,150,150)
+}
+
 /* form */
 
-.fancybox-content{
-    background-color: white;
-    color: black;
+.form-grid{
+    display: grid;
+    
+}
+
+.form-btn{
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    transition: 0.3s ease-in-out;
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+    width: 150px;
+    cursor: pointer;
+    outline:none;
+}
+
+.form-btn:hover{
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.form-btn:focus{
+    outline:none;
+}
+
+input[type=text]:focus {
+    border: 3px solid rgb(180, 180, 180);
+  }
+
+#form-msg{
+    margin-bottom: 10px;
 }
 
 @media (max-width:1199px){
@@ -230,6 +304,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     .booking-container-box{
         margin: 10px;
     }
+
 
 }
 @media (max-width:767px){
